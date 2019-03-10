@@ -1,0 +1,17 @@
+---
+layout: default
+---
+{{ content }}
+
+{% for skill in site.skills %}
+<div class="skill">
+	<hr>
+	<div>
+	  <div>{{ skill.icon }}</div>
+	  <h2>{{ skill.title }}</h2>
+	</div>
+	<p><strong>Úroveň: </strong>{{ skill.level }}</p>
+	<p>{{ skill.content }}</p>
+	<br>
+</div>
+{% endfor %}

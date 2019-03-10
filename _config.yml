@@ -1,3 +1,16 @@
-name: Hank Quinlan, Horrible Cop
+name: WPUB projekt
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
+my-name: Veronika
+email: veronikaklacikova@gmail.com
+github: "https://github.com/veronn"
+school-web: https://www.fiit.stuba.sk/
+school-name: FIIT STU
+gems:
+- jekyll-email-protect
+- jekyll-sitemap
+collections:
+- photos
+- skills
+- assignments
+- interests

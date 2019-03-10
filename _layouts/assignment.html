@@ -1,0 +1,15 @@
+---
+layout: wpub
+---
+<h2>Zadanie {{page.number}}</h2>
+
+{% for a in site.assignments %}
+	{% if a.number == page.number %}
+		<div class="assignment">
+			<p style="color:#bbb;">Deadline: <strong>{{a.deadline | date_to_string }}</strong></p>
+			{{ a.content }}
+		</div>
+	{% endif %}
+{% endfor %}
+
+{{ content }}

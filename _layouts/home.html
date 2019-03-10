@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<div class="post">{{ content }}</div>
+<hr>
+<h3>Najnovšie príspevky v blogu</h3>
+<ul class="recent-3" style="padding-left: 0px;">
+	{% for post in site.posts limit:3 %}
+	<li>
+		<a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a><br>
+		{{ post.content | strip_html | truncatewords:10}}<br>
+		<a href="{{ post.url }}">Čítať viac...</a><br><br>
+	</li>
+	{% endfor %}
+</ul>

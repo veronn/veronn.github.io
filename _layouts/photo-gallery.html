@@ -1,0 +1,15 @@
+---
+layout: default
+---
+{{ content }}
+
+{% assign sortedPhotos = site.photos | sort: 'date' %}
+
+{% for photo in sortedPhotos %}
+<div class="photo-gallery">
+	<h2>{{ photo.title }}</h2>
+	<p>{{ photo.date | date_to_string }} - {{ photo.place }}</p>
+	<img src="{{ photo.image_path }}"/>
+	<p>{{ photo.content }}</p>
+</div>
+{% endfor %}
